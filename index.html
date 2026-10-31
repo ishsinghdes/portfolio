@@ -1,0 +1,264 @@
+<!doctype html>
+<!-- Concept coded by Ish Singh, 2026. A skill-building / portfolio concept; not affiliated with any real product. Commercial adaptations should credit relevant creators and rights holders. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Ish Singh — product designer focused on UX strategy, research, and design systems.">
+  <title>Ish Singh — Product Designer</title>
+  <script>
+    (() => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      // Animate fresh home arrivals; deep links and history restoration stay immediate.
+      const navigation = performance.getEntriesByType('navigation')[0];
+      if (location.hash || navigation?.type === 'back_forward') return;
+      document.documentElement.classList.add('intro-pending');
+      // Fail open if the main script cannot load.
+      window.__heroIntroFallback = setTimeout(() => {
+        document.documentElement.classList.remove('intro-pending', 'intro-playing');
+      }, 5000);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=cosmic-lines-5">
+</head>
+<body>
+  <div class="theme-backdrop theme-backdrop--cloud" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--anime" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--mural" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--blueprint" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--underwater" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--bauhaus" aria-hidden="true"></div>
+  <div class="theme-backdrop theme-backdrop--urban" aria-hidden="true"></div>
+  <canvas id="scene-motion" aria-hidden="true"></canvas>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="blueprint-ground-shadow" aria-hidden="true"></div>
+  <header class="topbar topbar-clock">
+    <span class="header-name">ISH SINGH / PRODUCT DESIGNER</span>
+    <time class="live-clock" id="live-clock" aria-label="Current time in Indian Standard Time"><span class="clock-value">--:--</span> <span class="clock-zone">(IST)</span></time>
+  </header>
+  <button class="panel-close panel-close-global" type="button" aria-label="Back to home" hidden><span aria-hidden="true">←</span></button>
+
+  <main id="home">
+    <div class="landing-stage" id="landing-stage" data-panel="">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <span class="hero-mark" aria-hidden="true"><span class="hero-mark-star">✳</span><span class="hero-mark-alien">👽</span></span>
+        <h1 id="hero-title"><span class="hero-scale-word">Designing</span><br><em><button class="hero-theme-trigger" type="button" aria-label="Change visual theme. Current theme: galaxy"><span class="hero-theme-base">better experiences</span><span class="hero-theme-fill" aria-hidden="true">better experiences</span></button></em><br><span class="hero-scale-word">for you</span></h1>
+        <p class="hero-copy">I’m Ish Singh, a Product Designer with almost 6 years of experience having worked with <a class="company-link" href="https://www.frog.co/" target="_blank" rel="noopener noreferrer">frog design</a> / <a class="company-link" href="https://www.capgemini.com/gb-en/about-us/who-we-are/our-brands/capgemini-invent/" target="_blank" rel="noopener noreferrer">Capgemini Invent</a>, <a class="company-link" href="https://www.tcs.com/" target="_blank" rel="noopener noreferrer">TCS</a>, and <a class="company-link" href="https://www.siemens.com/en-us/company/" target="_blank" rel="noopener noreferrer">Siemens</a>.</p>
+        <div class="hero-actions">
+          <button class="text-link panel-trigger" type="button" data-open-panel="work" aria-controls="work-panel" aria-expanded="false">My Works <span>↗</span></button>
+          <button class="text-link panel-trigger" type="button" data-open-panel="education" aria-controls="education-panel" aria-expanded="false">My Education <span>↗</span></button>
+        </div>
+      </div>
+
+    </section>
+
+    <aside class="side-panel education-panel" id="education-panel" aria-label="Education and experience" aria-hidden="true" inert>
+    <section class="experience section-wrap">
+      <div class="experience-row">
+        <div>
+          <h2>Experiences and<br><em>Education.</em></h2>
+          <div class="education">
+            <p class="education-label">EDUCATION</p>
+            <div class="education-timeline">
+              <article class="education-entry">
+                <div class="education-summary">
+                  <span class="education-year">2019 — 2021</span><span class="education-degree">M.Des, Industrial Design <small>(UI/UX)</small></span>
+                </div>
+                <div class="education-detail">
+                  <a href="https://design.iitd.ac.in/" target="_blank" rel="noopener noreferrer">IIT Delhi <span>· Department of Design ↗</span></a>
+                </div>
+              </article>
+              <article class="education-entry">
+                <div class="education-summary">
+                  <span class="education-year">2014 — 2019</span><span class="education-degree">B.Arch, Architecture</span>
+                </div>
+                <div class="education-detail">
+                  <a href="https://www.jmi.ac.in/architecture" target="_blank" rel="noopener noreferrer">Jamia Millia Islamia <span>· Department of Architecture ↗</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="roles">
+          <p class="education-label work-label">WORK</p>
+          <div class="role">
+            <span>JAN 2024 —<br>MAR 2026</span>
+            <div class="role-main">
+              <h3>Interaction Designer II <small>· <a class="company-link" href="https://www.frog.co/" target="_blank" rel="noopener noreferrer">frog</a>, <a class="company-link" href="https://www.capgemini.com/gb-en/about-us/who-we-are/our-brands/capgemini-invent/" target="_blank" rel="noopener noreferrer">Capgemini Invent</a></small></h3>
+              <div class="role-description" id="experience-description-1"><div class="role-description-inner"><p>UX/UI across Maruti Suzuki Arena and Nexa. Arena reached 10–15M monthly visitors; Nexa journey improvements increased engagement by 34% in the first month.</p></div></div>
+            </div>
+            <span>GURUGRAM</span>
+            <button class="role-toggle" type="button" aria-expanded="false" aria-controls="experience-description-1" aria-label="Toggle details for Interaction Designer II at frog and Capgemini Invent, January 2024 to March 2026"></button>
+          </div>
+          <div class="role">
+            <span>JUL 2021 —<br>DEC 2023</span>
+            <div class="role-main">
+              <h3>UI/UX Designer <small>· <a class="company-link" href="https://www.tcs.com/" target="_blank" rel="noopener noreferrer">Tata Consultancy Services</a></small></h3>
+              <div class="role-description" id="experience-description-2"><div class="role-description-inner"><p>Redesigned enterprise systems and crisis management tools, improving task success, retention, and response times.</p></div></div>
+            </div>
+            <span>GURUGRAM</span>
+            <button class="role-toggle" type="button" aria-expanded="false" aria-controls="experience-description-2" aria-label="Toggle details for UI/UX Designer at Tata Consultancy Services, July 2021 to December 2023"></button>
+          </div>
+          <div class="role">
+            <span>JUL 2020 —<br>MAY 2021</span>
+            <div class="role-main">
+              <h3>UX Research Intern <small>· <a class="company-link" href="https://www.siemens.com/en-us/company/" target="_blank" rel="noopener noreferrer">Siemens</a></small></h3>
+              <div class="role-description" id="experience-description-3"><div class="role-description-inner"><p>Researched mixed reality and virtual reality experiences, exploring emerging interaction patterns and user behaviour.</p></div></div>
+            </div>
+            <span>BENGALURU</span>
+            <button class="role-toggle" type="button" aria-expanded="false" aria-controls="experience-description-3" aria-label="Toggle details for UX Research Intern at Siemens, July 2020 to May 2021"></button>
+          </div>
+          <div class="role">
+            <span>2021 — 2024</span>
+            <div class="role-main">
+              <h3>Independent / Freelance Product Design</h3>
+              <div class="role-description" id="experience-description-4"><div class="role-description-inner"><p>Designed an apparel brand’s connected social, web, packaging, and customer engagement experience.</p></div></div>
+            </div>
+            <span>INDIA</span>
+            <button class="role-toggle" type="button" aria-expanded="false" aria-controls="experience-description-4" aria-label="Toggle details for Independent / Freelance Product Design, 2021 to 2024"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    </aside>
+
+    <aside class="side-panel work-panel" id="work-panel" aria-label="Selected work" aria-hidden="true" inert>
+    <section class="work section-wrap" id="work">
+      <div class="section-head"><div><h2>Some things I’ve <em>made.</em></h2></div><button class="reorder-toggle" type="button" aria-pressed="false">Arrange works</button></div><p class="reorder-help" hidden>Drag projects to rearrange. With a keyboard, focus a project and use the arrow keys. Select Done when finished.</p><span class="reorder-status" aria-live="polite"></span>
+      <div class="project-grid">
+        <a class="project-card" href="https://ishsinghdes.github.io/car-dashboard/" target="_blank" rel="noopener noreferrer" aria-label="Open Automobile Analytics dashboard">
+          <div class="project-art project-art--image" aria-hidden="true"><img class="project-thumbnail-image" src="assets/project-overviews/16-01.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">16</span><h3>Dashboard UI/UX — Automobile Analytics</h3><p>Interactive dashboards and key metrics make vehicle data easier to understand.</p></div><div class="project-tags"><span>UI/UX</span><span>AUTOMOTIVE</span><span>DATA DESIGN</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.marutisuzuki.com/arena" target="_blank" rel="noopener noreferrer" aria-label="Open Maruti Suzuki Arena digital experience">
+          <div class="project-art project-art--image arena-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/maruti-arena.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">05</span><h3>Maruti Suzuki Arena</h3><p>A digital experience for discovering your next drive.</p></div><div class="project-tags"><span>UI/UX</span><span>AUTOMOTIVE</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/tsunamitracker/" target="_blank" rel="noopener noreferrer" aria-label="Open the Tsunami History Period global atlas">
+          <div class="project-art project-art--image tsunami-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/tsunami-tracker.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">03</span><h3>Tsunami History — Global Atlas</h3><p>An interactive map and timeline for exploring historical tsunami events worldwide.</p></div><div class="project-tags"><span>UI/UX</span><span>DATA DESIGN</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.behance.net/gallery/194745559/UXUI-Crisis-Management-Application" target="_blank" rel="noopener noreferrer" aria-label="Open Crisis Management Application on Behance">
+          <div class="project-art project-art--image crisis-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/crisis-management.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">07</span><h3>Crisis Management Application</h3><p>A UX/UI case study for coordinating information in a crisis-response application.</p></div><div class="project-tags"><span>UI/UX</span><span>CRISIS RESPONSE</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.behance.net/gallery/128252833/UIUX-Job-Interview-and-Pre-Hire-Tests-App-%28PITO%29" target="_blank" rel="noopener noreferrer" aria-label="Open PITO job interview and pre-hire tests app on Behance">
+          <div class="project-art project-art--image pito-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/pito.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">09</span><h3>PITO — Interview & Pre-Hire App</h3><p>A UX/UI case study for a job interview and pre-hire assessment app.</p></div><div class="project-tags"><span>UI/UX</span><span>HIRING</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/SOLAR/" target="_blank" rel="noopener noreferrer" aria-label="Open Aurya solar planning experience">
+          <div class="project-art project-art--image aurya-solar-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/aurya-solar.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">08</span><h3>Aurya — Solar Planning</h3><p>A solar dashboard for exploring local potential, estimating system output, and planning next steps.</p></div><div class="project-tags"><span>UI/UX</span><span>CLIMATE TECH</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.nexaexperience.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Maruti Suzuki Nexa project">
+          <div class="project-art project-art--image nexa-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/nexa-experience.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">04</span><h3>Nexa — Enhanced Digital Experience</h3><p>Designing clearer journeys across a premium automotive experience.</p></div><div class="project-tags"><span>UI/UX</span><span>AUTOMOTIVE</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/goodmoney/" target="_blank" rel="noopener noreferrer" aria-label="Open Good Money personal finance app design">
+          <div class="project-art project-art--image goodmoney-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/good-money.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">01</span><h3>Good Money — Personal Finance</h3><p>A calm wallet experience for balances, credit, payments and everyday money.</p></div><div class="project-tags"><span>UI/UX</span><span>FINTECH</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/cryptodesign/" target="_blank" rel="noopener noreferrer" aria-label="Open Bharat Crypto product design">
+          <div class="project-art project-art--image bharat-crypto-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/bharat-crypto.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">02</span><h3>Bharat Crypto — Digital Assets</h3><p>A learning-first crypto experience bringing Indian markets, explainers and tools together.</p></div><div class="project-tags"><span>UI/UX</span><span>FINTECH</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/IQtest/" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's IQ Test experience">
+          <div class="project-art project-art--image iq-test-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/iq-test.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">06</span><h3>IQ Test — A Little Brain Stretch</h3><p>A playful IQ challenge designed to give users a little brain stretch.</p></div><div class="project-tags"><span>UI/UX</span><span>INTERACTION</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.behance.net/gallery/102865719/UIUX-Shared-Information-Organisation-App-SIO" target="_blank" rel="noopener noreferrer" aria-label="Open Shared Information Organisation project on Behance">
+          <div class="project-art project-art--image field-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/data-app-organiser.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">10</span><h3>Data & App Organiser</h3><p>An app concept for organising and sharing information.</p></div><div class="project-tags"><span>UI/UX</span><span>PRODUCT DESIGN</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://www.behance.net/gallery/154701881/MIXED-REALITY-UIUX-Socio-Technical-Systems" target="_blank" rel="noopener noreferrer" aria-label="Open Mixed Reality Socio Technical Systems on Behance">
+          <div class="project-art project-art--image vr-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/mrvr.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">11</span><h3>MR/VR — Socio Technical Systems</h3><p>Exploring interaction across shared physical and digital environments.</p></div><div class="project-tags"><span>UI/UX</span><span>MIXED REALITY</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/ishdesignself-analysis/" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's design process self-analysis">
+          <div class="project-art project-art--image process-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/design-process.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">12</span><h3>Ish’s Design Process</h3><p>An interactive ten-stage process wheel for exploring strengths and areas to grow.</p></div><div class="project-tags"><span>UI/UX</span><span>PROCESS</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/shipbounce/" target="_blank" rel="noopener noreferrer" aria-label="Open Ship Bounce, an arcade game interface project">
+          <div class="project-art project-art--image shipbounce-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/ship-bounce.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">13</span><h3>Ship Bounce — Game UI/UX</h3><p>A playful pirate-ocean arcade game with responsive touch and keyboard controls.</p></div><div class="project-tags"><span>UI/UX</span><span>INTERACTION</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/wolfy/" target="_blank" rel="noopener noreferrer" aria-label="Open Wolfy daily focus experience">
+          <div class="project-art project-art--image wolfy-art" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/wolfy.png" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">14</span><h3>Wolfy — Daily Focus Companion</h3><p>A calm daily focus space that helps make room for work that matters.</p></div><div class="project-tags"><span>UI/UX</span><span>PRODUCT DESIGN</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card" href="https://ishsinghdes.github.io/444label/" target="_blank" rel="noopener noreferrer" aria-label="Open Audio Visualizer project overview">
+          <div class="project-art project-art--image" aria-hidden="true"><img class="project-thumbnail-image" src="assets/thumbnails/444-records.jpg" alt="" loading="lazy" decoding="async"></div>
+          <div class="project-caption"><div><span class="project-index">15</span><h3>Audio Visualizer — 3D UI/UX</h3><p>A 444 Records site showcasing UDNH, their music and creative work through an immersive audio visualizer.</p></div><div class="project-tags"><span>UI/UX</span><span>3D</span><span>MUSIC</span></div><span class="arrow">↗</span></div>
+        </a>
+        <a class="project-card project-more-card behance-tile" href="https://www.behance.net/ishnishansingh" target="_blank" rel="noopener noreferrer" aria-label="View more projects on Behance (opens in a new tab)">
+          <img src="assets/contact-icons/behance.png" alt="" loading="lazy">
+        </a>
+      </div>
+    </section>
+    </aside>
+    </div>
+
+    <section class="contact-section section-wrap" id="contact" aria-label="Contact Ish Singh">
+      <div class="card-stage">
+        <div class="business-card-scene">
+          <div class="business-card" id="profile-card" data-face="front" tabindex="0" role="group" aria-label="Ish Singh, Product Designer business card">
+            <article class="business-face business-face-front" aria-label="Ish Singh, Product Designer">
+              <div class="card-topline"><span>OPEN FOR WORK</span></div>
+              <div class="card-front-copy">
+                <p class="card-name">Ish Singh</p>
+                <p class="card-role">Product Designer</p>
+                <p class="card-experience"><span>UX RESEARCH · UX STRATEGY<br>UI / AI-DRIVEN SYSTEMS</span></p>
+              </div>
+              <div class="card-bottomline"><span>NEW DELHI</span></div>
+            </article>
+            <article class="business-face business-face-back" aria-label="Spotify QR code for Ish Singh's artist page" aria-hidden="true" inert>
+              <div class="card-back-content">
+                <a class="spotify-qr-link" href="https://open.spotify.com/artist/3ouHh5kK3likV9T9Cnv5W8?si=YXKNVd0zTbq5q-UBvuI7jA" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's Spotify artist page">
+                  <img class="spotify-qr" src="assets/spotify-artist-qr.svg" width="225" height="225" alt="Scan this QR code to open Ish Singh's Spotify artist page" decoding="async">
+                </a>
+                <span class="card-back-caption">Scan to listen</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <nav class="card-contact-links" aria-label="Contact options">
+          <a class="card-contact-link" href="tel:+918826756314" aria-label="Call Ish Singh at +91 88267 56314">
+            <span class="contact-icon-frame"><img src="data:image/png;base64,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" width="20" height="20" alt="" decoding="async"></span>
+          </a>
+          <a class="card-contact-link" href="mailto:ishnishansingh@gmail.com" aria-label="Email Ish Singh at ishnishansingh@gmail.com">
+            <span class="contact-icon-frame"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAErklEQVR42u2du2tUURDGT+NbsBEEH4hiIT7+AP8EC+0isdHOJr6wsLYRbRVFEwVBMcZFLQSjpRaiiIVoIMnejWLQQmzEqPjMOLNsTNjEuC+z95z5fTC7S/buze7Md745j7n3hAAAAAAAAAAAAAAAAAAAAAAAAAAAV7iWyZpCJvv7SnK3L5PB6yX5pCZYru2Txcpidj2TrptFWV134AvDskpP0K32A4dGbpn80ufCjZeytrbgZ7JTA/8R56VlFtO+ouyYNfgqHQcqjMFpiaqBxXjmfF+S7frmTxyVPglM5WfK+ci+o3TQOygrJ6W/JBdxjDsS9PwZ6iH9LgnwozxELHf8cIjX/kBX0Id+nOGWAHdMAYo4w2kayGTIOoBjOMNtP2DMCPAVZ7hVgC9GgDc4w62NBn24hyPcdgL7TQGO4gyfplPCR4ItEzIR5HgiqLIK2ItT3BHgyp+1gLIKsBjkqff/YVqlkBKgU98Yx0HJB39crWPmgpCSHIYEaQdfnw/OWhWkB+zWAz/jsOSC/9lUvqa6wBuvZKN+4DmOSyb4g4UR2VpfZfCoLLLKYBwYfW//8uVnsqThawOUPXu4HiDOef5CSQ615AIRUoIDySclIPmkBI+S3whjSAnxS/6EoodmT0AA4pP8qQ04VEnIPlJC2pJfHa/QakZhOZb8TE5Vnyu0OqcQoHxLfk0EICWkK/k1E4CUkKbk100AUkJakt8QAUgJ6Uh+wwQgJaQh+U0TgJQQt+S3hACkhHglv2UEICXEKfktJwApIe4GFFosYaSEyPwVUmM0kt9mAuTtByL5bSAAKSEefwRvjPcu+XNOAO8pIe8NIHiXQO+/N9Ai8qF4l17JwnYoXiAn+iZ4QCJ9/55Ai/El+bkjQOwpIXYCByTUdwoLdKJ8SX7uCZD3lJDaMDYwkeJ7IiswrvYl+dERoN0pIfWZy8Dcuu+1i2gIMJctMmXJj54AFRIMFIqyqZ4A3X4ri/WzZ2fdGte2Vi3JGTu2rnSj38W+U4y+jJIAFTOZ3dvALXG26OdOa7Bf2J455T2T7LW23t5MNtd7PvsOMVcwxUyAubkrVmKSnxwB/tt98ZyUrCVBgGZ67d6LVpMhwP9OCalIfvIEmBglNNKh+xvsXLH28l0SoGLftcWetJbbTKvXEcKxlDfXTJkAE2owYpddaydxWc3jej22vHtKSV6m7p/kCTB1n1xVhFsWWN0vb9u1TNbYeoFZ+bX+rbJlzi1P+ym7IQAGATAIgEEADAJgEACDABgEwMQKJL7hCLe3qPtqCvAeZ7i9QeW7oIsdT3CGW3tkKaAHRzi1TM4bATpxhtsU0BEKA7LU0+oXNllVbbGfKG2+gEPcjQC6JwsgMtlgFTQ4xs/wrzAk66qrXU/iHDcEOD6tDKr7qczTNx/goOTtYX9RFsxc/ToiK/SAUZyUbK//tcW4lmvnIEGKwa+1VP7qkCxXItzHcenI/j9bfjUsTyhrTrBYFHVn75t1+HS8P7/xCyGHZX1lupit3mIqgddx/rShXjOwWSOdO95l88f6Tx7bShLqkJNWrrGoxOScTe+243J5AAAAAAAAAAAAAAAAAAAAAAAAAOQHvwExrhhrPkWq/gAAAABJRU5ErkJggg==" width="20" height="20" alt="" decoding="async"></span>
+          </a>
+          <a class="card-contact-link" href="https://www.facebook.com/ishnishan" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's Facebook profile">
+            <span class="contact-icon-frame"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEGklEQVR42u3dS4iNYRzH8eOSa0mxUIgdCxbkspiFKCWlbJCwsLGQS+zFgqhRNjazMgZzOY1rUqaYlGIxmsFg5n3PmZORyGLGgqlxmb//O6ZcZibO7X2e9/y/v3p6DzMpz//zXM47zzsnlSLj5k4gUxtDWZkOZU9TRo41ZuS8Xm9oe6Svs3rtbQqlT7+nX1+Lvv4e/Vnb++jr+vfPtLXo6zr9+ln9d47qdWd9t6y90iVz6WHPku6W+VqsvVrAy3p9oe3rcGHL1BTHR70+0Wut4jgQwYjQUYkY05yTpVqAM1rsznIWOw8UB6lKHFP7z5H+0IeiAyCmHBeZqB28bWT9Fh8bAMq1vmdlo3Zul6+FB0C5Ct8r06M1fniH7nnxAVCGDZ4WvjsJhQdA6af8NbrWf0hS8QFQomjhN2tHfk5a8QFQgtRnZJV25KckFh8ARaYhJ4uj27BJLT4Airy5o8V/nuTiA6CYdT+U00kvPgAKXfcDWaGd9wUABiMiE3TX31YJxQdAYVP/1kopPgAKG/3tALA6+gPZUknFB0D+d/xuAsBorr2UOQpgEABGo511qNKKD4D8ADwAgNHUdcjMpEz/WtChkaPjr4ePiv9qPSNHyPt+/78A4D+iR6g3eVfo6OxBKA3R8e50RjZcDWRBBDWfk0vpnMy7FMgsKvzv3X+1L6M7eicSnTdMi0yiMnGt/z4c5w6lozErq6mGm9u//Y5Hfv2FnEyjEg7SEMpCx2t9U/R8AZUwuAHUkf+Kke8aQEYOuwKQDmQdFXC//p9xBOA+ve/HHcCLTkZ/KDvofT8A3HWw9g/ceisz6H0/7gE8dQDgHj3vD4Ccg7d+J+l5fzaB72IHkJVd9Lw/M0Cfgxmgip73ZwYYcABgGT3vD4BvcQNo7pFF9Lw/bwNjvwdwPSez6XnDAFpbZTI9bxgAvQ4AAgACAAIAAgACAAIAkiroeX69r15TTHN0Ergmjlbxh070J3knKvGBzlI9WmbhR7kAGP/UUQsAbM8A1QCw3ALZDQDDTZ8wXg4Au9P/YLpTpgDALoB2Kwc6ATD2O4BaANjeAB4BgO0ZYD0ADDczHyQNgDE3gG8sPdUDgNHT/20A2J4BTgHAcgtlOwAs3wLukSUAsLv+D5j6DaMAGNUep4w92w+Av46aAcAygED2A8D2DFAFALsbwCFznw0AgD9GfzaVsvd7fvdFH/NaTHNUrLZSNx0M51KEJ4MIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACADQA/ANvQuO3LOcGCAAAAAElFTkSuQmCC" width="20" height="20" alt="" decoding="async"></span>
+          </a>
+          <a class="card-contact-link" href="https://www.linkedin.com/in/ish-singh/" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's LinkedIn profile">
+            <span class="contact-icon-frame"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFXElEQVR42u2dXYhVVRTHjymYZlZ+9KARPVUvQRaOIlEhWEHQh1haYQhaDyGKgowPolAPYoT4JCqFYszc66VJDeqxIUGo1NQUZ+acc+fqjKMjIlgT5Pdy7dtVdBK8c8/Z++4z9/eHzQzO13at3157nf2xThAk1LehjC9EMj8fScuuWA7pxzP5WC5pO62f/6btG/36W4UeGROg4aOWTpmkTt5onK2Ol/s1/b6/C7GsLRyXcVgv48oX5SMd2Rercfz/QIjkbC6U17BiBrVO5AF14PpaHD8oGlzVaLAci2Zt5Kfg/LtACOUzrJqtsH8jTQC0XdFIMBvrZiHhq3HOryInOPlTKKOxst+hf5MN599q+pi4Eit7qkJRHqn2US9BFDhrEkys7ScAH9p0/u0oUJSXsLaf4b/VBQC7ItmAtX0EIJbDLgDQv7MXa3soHZn9jiLAAaztZwS47CgCdGNtHyNALH1OIkAsv2JtP6eAA46mgDas7edTwHYnU0Akn2NtH9cBYnnXyTpALC9ibQ+184g8pAnagOXRf1JERmBtf/OALyzP/59gZY+1p0Me1lF6ztLo72xvl1FY2fdcIJI31FnXUh75/7Z2yQysm51FoTWpJn6hLMaqGZJJ1NRxzTpyryc+ExjJUiya1ekglHk6HVyo0fmn9edfwYoZV8speUwd+pWZx6u9F2CmkB/6ZCzWG2YnhtTBH6hz8wrDMf38fCXB6zdbyRopdmh7B8cjhBBCCCGEEEIIoWEpUwkl3yUvm7MOlf2TDbowtk3bTm1bdXHsy/I5i1BWmIUyXVB7jjI6QbaLZ5ir7urULdqO1rp1bs5HmN+hkCxoi+VxX5Z7n9QOHbTVTKGpWvqVi+RtG/1RB/xYbR/aQnmiMrp7LdyVuKof96j93yyIjKwbALmiPG31QGiPTKhxV3KxpT713O9vf39CJg5lMywFGKJcLHMBwAMANNQvslUwo4r2S6FbngGAOgBQrpXwXz1EqWcrb61H8h4AOAQgV5KnTBiut/PvSBZvmPMVAOAAgO9K8qz5N1+cP6iwxmoAsAiAyfJN+VsfnX9HNPgYACwAYBZmTL1jn51faf+YKAUAKQNQXtTx3/m3EsOD1tYKGhEAnVubkh5/r8NUsAQA0hlNAz5l/ENofeYyLwA0dlsGAA3cdBroSP2qPQBkq+km2asA0NhRYDMANDIAev8y1WkAALLXCl3yPAA0MgBpvpIHAKqady9o6C1WXp3XaUrg17k/rQBgt7BVv3mRhrbXzRtV7tW/3SV5VFcU55hDoPozfznOA7oBwM7Iumiqm2wvyYND7OtkdcrXLs8LpPaORgC43Q5pcjU1YeHNT13tMbSGMg0AUtxtM+XygnQKcDc7mqbeB4CUErykIz8YXGwrkn0O+t4MAJ5us5a3m+33exMAJDdiaOughf7+/ZanrTwA+Li96i4XaAeAZEnUdZv388yFUMv9/x0AkoX/PwP7L+Q4YxGAYwDg07bqvaeBn23mLwCQ7J3GCx0U4N5qMQnsBYBkt26aAvuv5Fll8f9wHgCSLKV2yBQHACyyGAEGACBJSXsHRRnMnX+LOcA1AEjwSvsgcFJ9ZY5N2wJA7Y9QJRcA6AneWQDgZwTodAFAPpSZAOBnBDjqBICiTAcAP58C/nD0at4XAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEIIIYQQQgghhBBCCCGEEEIIITT8dRO6G2vO0VMv0gAAAABJRU5ErkJggg==" width="20" height="20" alt="" decoding="async"></span>
+          </a>
+          <a class="card-contact-link" href="https://www.behance.net/ishnishansingh" target="_blank" rel="noopener noreferrer" aria-label="Open Ish Singh's Behance portfolio">
+            <span class="contact-icon-frame"><img src="data:image/png;base64,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" width="20" height="20" alt="" decoding="async"></span>
+          </a>
+        </nav>
+        <a class="card-download card-download-footer" href="IshGLOBALCV3.pdf" download="Ish-Singh-CV.pdf">Download CV</a>
+      </div>
+    </section>
+
+  </main>
+  <div class="project-detail-overlay" id="project-detail" aria-hidden="true" inert hidden>
+    <div class="project-detail-backdrop" data-detail-close></div>
+    <article class="project-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="project-detail-title" tabindex="-1">
+      <div class="project-detail-content" id="project-detail-content"></div>
+      <div class="project-detail-bottom-actions">
+        <button class="project-detail-back project-detail-back-bottom" type="button" data-detail-close aria-label="Back to all works"><span aria-hidden="true">←</span></button>
+        <a class="project-detail-mobile-link" href="#" target="_blank" rel="noopener noreferrer">View full design ↗</a>
+      </div>
+    </article>
+  </div>
+  <script src="script.js?v=cosmic-lines-5"></script>
+  <script src="scene-renderer.js?v=cosmic-lines-5"></script>
+</body>
+</html>
